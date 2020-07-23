@@ -1,0 +1,31 @@
+*{
+	box-sizing: border-box;
+	padding: 0px;
+	margin: 0px;
+
+}
+html {
+  scroll-behavior: smooth;
+}
+body{
+	font-style: "Rubik", serif;
+	color: #ffffff;
+}
+/*Navbar*/
+nav{
+	z-index: 100;	
+}
+#navbarNav{
+	font-size: 1.4em;
+}
+.nav-item{
+	margin-right: 30px;
+}
+#nav-links:hover{
+	transition: all .3s ease-out 0s;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+    transition-delay: 0s;
+    color: #dc3545;
+}
