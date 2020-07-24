@@ -10,7 +10,7 @@ html {
 body{
 	font-style: "Rubik", serif;
 	color: #ffffff;
-	background-image: url(images/back.jpeg);
+	background-image: url(../images/back.jpeg);
 	background-size: cover;
 }
 .bd-placeholder-img {
@@ -38,10 +38,10 @@ a:hover {
 .btn-secondary,
 .btn-secondary:hover,
 .btn-secondary:focus {
-  color: #333;
+  color: #fff;
   text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: #fff;
-  border: .05rem solid #fff;
+  background: transparent;
+  border: .1rem solid #fff;
 }
 
 
@@ -118,4 +118,16 @@ body {
 }
 header.masthead{
 	margin-bottom: 5vh;
+}
+/*Footer*/
+footer{
+	margin-top:45vh;
+	color: #fff !important;
+	font-size: 1.3rem;
+}
+footer div{
+	padding:0px;
+}
+span.inline-flex{
+	margin-top: 0px !important;
 }
