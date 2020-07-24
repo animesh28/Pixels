@@ -44,16 +44,6 @@ a:hover {
   border: .1rem solid #fff;
 }
 
-
-/*
- * Base structure
- */
-
-html,body {
-  height: 100%;
-  background-color: #333;
-}
-
 body {
   display: -ms-flexbox;
   display: flex;
@@ -121,7 +111,7 @@ header.masthead{
 }
 /*Footer*/
 footer{
-	margin-top:45vh;
+	margin-top: 65vh;
 	color: #fff !important;
 	font-size: 1.3rem;
 }
