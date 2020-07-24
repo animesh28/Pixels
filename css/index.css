@@ -114,6 +114,7 @@ footer{
 	margin-top: 65vh;
 	color: #fff !important;
 	font-size: 1.3rem;
+  text-shadow: 2px 2px #ff0000;
 }
 footer div{
 	padding:0px;
