@@ -125,8 +125,6 @@ img.about_cover{
 }
 /*Footer*/
 footer{
-	margin-top:45vh;
-	color: #fff !important;
 	font-size: 1.3rem;
 }
 footer div{
@@ -134,4 +132,7 @@ footer div{
 }
 span.inline-flex{
 	margin-top: 0px !important;
+}
+.text-gray-500 svg{
+	display: inline;
 }
