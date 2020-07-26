@@ -12,6 +12,7 @@ body{
 	color: #ffffff;
 	background-image: url(../images/back.jpeg);
 	background-size: cover;
+  background-repeat: none;
 }
 .bd-placeholder-img {
     font-size: 1.125rem;
