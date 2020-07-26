@@ -123,6 +123,9 @@ h3{
 img.about_cover{
 	margin-top: 10vh;
 }
+a.IG_Page{
+	color: #6C63FF;
+}
 /*Footer*/
 footer{
 	font-size: 1.3rem;
