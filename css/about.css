@@ -126,7 +126,7 @@ img.about_cover{
 /*Footer*/
 footer{
 	font-size: 1.3rem;
-}
+}https://www.microsoft.com/en-in/software-download/windows10ISO
 footer div{
 	padding:0px;
 }
@@ -218,7 +218,7 @@ span.inline-flex{
 	div.about_wrap{
 		width: 100%;
 		background-image: url(../images/about_phone.jpeg);
-		background-size: contain;
+		background-size: cover;
 		background-repeat: no-repeat;
 	}
 	div.row:nth-of-type(2){
@@ -300,13 +300,51 @@ span.inline-flex{
 		margin-top: -100vh;
 	}
 	div.photo_row{
-		margin-bottom: 20vh !important;
+		margin-bottom: 1vh !important;
 	}
 	h2{
 		margin-top: 1vh;
 	}
 	.navbar_collapse{
 		padding-left: 30vh !important;
+	}
+
+}
+@media (min-width: 769px) and (max-width: 1199px) and (orientation: portrait){
+	.navbar-brand img{
+		margin-left: 28.5vh;
+	}
+	h1{
+		font-size: 5em;
+	}
+	div.about_wrap{
+		width: 100%;
+		background-image: url(../images/about_phone.jpeg);
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	div.row:nth-of-type(2){
+		margin-top: 0px;
+	}
+	.photo img{
+		margin-top: 0px;
+	}
+	div.photo_row{
+		margin-bottom: 1vh !important;
+			margin-top: 7vh;
+	}
+	h2{
+		margin-top: 1vh;
+	}
+	.navbar_collapse{
+		padding-left: 30vh !important;
+	}
+	h3{
+		margin-top: 7vh;
+	}
+	.our_team{
+		margin-top: 7vh;
+		maargin-right: 5vh;
 	}
 
 }
