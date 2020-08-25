@@ -1,0 +1,44 @@
+html {
+  font-size: 14px;
+}
+body{
+	font-family: 'Red Rose', cursive; 
+}
+h1, h5{
+	font-family: 'Lobster', cursive;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.container {
+  max-width: 960px;
+}
+
+.pricing-header {
+  max-width: 700px;
+}
+
+.card-deck .card {
+  min-width: 220px;
+}
+/*Footer*/
+footer{
+	font-size: 1.3rem;
+}
+footer div{
+	padding:0px;
+	margin-bottom: 20px;
+}
+span.inline-flex{
+	margin-top: 0px !important;
+}
+.text-gray-500 svg{
+	display: inline;
+}
+svg.social{
+	width: 5vh !important;
+	height: 5vh !important;
+}
