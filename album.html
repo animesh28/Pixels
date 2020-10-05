@@ -17,9 +17,80 @@
             z.style.display = "none";
           }
         }
-    </script>
+	</script>
+	<script type="text/javascript">
+		function show_1(){
+			var x = document.getElementById("album_more1");
+			x.style.display = "none";
+			var btn1 = document.getElementById("show_btn1");
+      var btn2 = document.getElementById("show_btn2");
+			if(x.style.display == "none")
+			{
+				x.style.display = "flex";
+				btn1.style.display = "none";
+        btn2.style.display = "block";
+			}
+		}
+	</script>
+  <script type="text/javascript">
+    function show_2(){
+      var x = document.getElementById("album_more2");
+      x.style.display = "none";
+      var btn1 = document.getElementById("show_btn2");
+      var btn2 = document.getElementById("show_btn3");
+      if(x.style.display == "none")
+      {
+        x.style.display = "flex";
+        btn1.style.display = "none";
+        btn2.style.display = "block";
+      }
+    }
+  </script>
+  <script type="text/javascript">
+    function show_3(){
+      var x = document.getElementById("album_more3");
+      x.style.display = "none";
+      var btn1 = document.getElementById("show_btn3");
+      var btn2 = document.getElementById("show_btn4");
+      if(x.style.display == "none")
+      {
+        x.style.display = "flex";
+        btn1.style.display = "none";
+        btn2.style.display = "block";
+      }
+    }
+  </script>
     <script src="https://js.instamojo.com/v1/checkout.js"></script>
     <script>
+      /* Start client-defined Callback Handler Functions */
+      function onOpenHandler () {
+        alert('Payments Modal is Opened');
+      }
+
+      function onCloseHandler () {
+        alert('Payments Modal is Closed');
+      }
+
+      function onPaymentSuccessHandler (response) {
+        alert('Payment Success');
+        console.log('Payment Success Response', response);
+      }
+
+      function onPaymentFailureHandler (response) {
+        alert('Payment Failure');
+        console.log('Payment Failure Response', response);
+      }
+      /* End client-defined Callback Handler Functions */
+
+      /* Configuring Handlers */
+      Instamojo.configure({
+        handlers: {
+          onOpen: onOpenHandler,
+          onClose: onCloseHandler,
+          onSuccess: onPaymentSuccessHandler,
+          onFailure: onPaymentFailureHandler
+        }
+      });
       function payment(){
         Instamojo.open("https://www.instamojo.com/@team_pixels");
       }
@@ -52,6 +123,7 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Oleo+Script&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Red+Rose&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/album_style.css">
   <body>
     <header>
   <div class="collapse bg-dark" id="navbarHeader">
@@ -114,413 +186,368 @@
 <!--Album Start-->
   <div class="album py-5 bg-light">
     <div class="container">
-      <!--Row 2-->
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm" >
-            <svg style="padding-top: 0.5em;" class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-              <title>Placeholder</title>
-              <foreignObject x='10px' y='2px' width='95%' height='95%'>
-                <img width='100%' height='100%'src='images/album/1.jpg' style="border-radius: 10px;">
-              </foreignObject>
-            </svg>
-            
-            <div class="card-body">
-              <p class="card-text">Description</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary" onclick="payment();">Buy</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
+      
+    <div class="container-fluid p-md-0 ">
+			<div class="row portfolios-area">
+				<div class="mix col-lg-6 col-md-6 web">
+					<a href="images/album/19.jpg" style="background-image:url(images/album/portrait/1.jpg);" class="portfolio-item set-bg">
+						<div class="pi-inner">
+							<h2>+ See Project</h2>
+						</div>						
+					</a>
+				</div>
+				<div class="mix col-lg-6 col-md-6 digital">
+					<a href="images/album/20.jpg" style="background-image:url(images/album/portrait/2.jpg);" class="portfolio-item set-bg " data-setbg="img/portfolio/2.jpg">
+						<div class="pi-inner">
+							<h2>+ See Project</h2>
+						</div>						
+					</a>
+				</div>
+        <div class="mix col-lg-12 col-md-6 brand">
+          <a href="img/portfolio/6.jpg" style="background-image:url(images/album/landscape/1.jpg);" class="portfolio-item set-bg" data-setbg="img/portfolio/6.jpg">
+            <div class="pi-inner">
+              <h2>+ See Project</h2>
+            </div>            
+          </a>
         </div>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <svg style="padding-top: 0.5em;" class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-              <title>Placeholder</title>
-              <foreignObject x='10px' y='2px' width='95%' height='95%'>
-                <img width='100%' height='100%'src='images/album/2.jpg' style="border-radius: 10px;">
-              </foreignObject>
-            </svg>
-            
-            <div class="card-body">
-              <p class="card-text">Description</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary" onclick="payment();">Buy</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
+				<div class="mix col-lg-4 col-md-6 web">
+					<a href="images/album/21.jpg" style="background-image:url(images/album/portrait/3.jpg);" class="portfolio-item set-bg" data-setbg="img/portfolio/3.jpg">
+						<div class="pi-inner">
+							<h2>+ See Project</h2>
+						</div>						
+					</a>
+				</div>
+				<div class="mix col-lg-4 col-md-6 digital">
+					<a href="img/portfolio/4.jpg" style="background-image:url(images/album/portrait/4.jpg);" class="portfolio-item set-bg" data-setbg="img/portfolio/4.jpg">
+						<div class="pi-inner">
+							<h2>+ See Project</h2>
+						</div>						
+					</a>
+				</div>
+				<div class="mix col-lg-4 col-md-6 rened">
+					<a href="img/portfolio/5.jpg" style="background-image:url(images/album/portrait/5.jpg);" class="portfolio-item set-bg" data-setbg="img/portfolio/5.jpg">
+						<div class="pi-inner">
+							<h2>+ See Project</h2>
+						</div>						
+					</a>
+				</div>
+				<div class="mix col-lg-12 col-md-6 brand">
+					<a href="img/portfolio/6.jpg" style="background-image:url(images/album/landscape/2.jpg);" class="portfolio-item set-bg" data-setbg="img/portfolio/6.jpg">
+						<div class="pi-inner">
+							<h2>+ See Project</h2>
+						</div>						
+					</a>
+				</div>
+				<div class="mix col-lg-6 col-md-6 rened">
+					<a href="img/portfolio/7.jpg" style="background-image:url(images/album/portrait/6.jpg);" class="portfolio-item set-bg" data-setbg="img/portfolio/7.jpg">
+						<div class="pi-inner">
+							<h2>+ See Project</h2>
+						</div>						
+					</a>
+				</div>
+				<div class="mix col-lg-6 col-md-6 brand">
+					<a href="img/portfolio/8.jpg" style="background-image:url(images/album/portrait/7.jpg);" class="portfolio-item set-bg" data-setbg="img/portfolio/8.jpg">
+						<div class="pi-inner">
+							<h2>+ See Project</h2>
+						</div>						
+					</a>
+				</div>
+	  </div>
+	  
+      <div class="row portfolios-area">
+        <div class="mix col-lg-12 col-md-6 brand">
+          <a href="img/portfolio/6.jpg" style="background-image:url(images/album/landscape/3.jpg);" class="portfolio-item set-bg" data-setbg="img/portfolio/6.jpg">
+            <div class="pi-inner">
+              <h2>+ See Project</h2>
+            </div>            
+          </a>
         </div>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <svg style="padding-top: 0.5em;" class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-              <title>Placeholder</title>
-              <foreignObject x='10px' y='2px' width='95%' height='95%'>
-                <img width='100%' height='100%'src='images/album/3.jpg' style="border-radius: 10px;">
-              </foreignObject>
-            
-            <div class="card-body">
-              <p class="card-text">Description</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary" onclick="payment();">Buy</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
+				<div class="mix col-lg-6 col-md-6 web">
+					<a href="images/album/19.jpg" style="background-image:url(images/album/portrait/8.jpg);" class="portfolio-item set-bg">
+						<div class="pi-inner">
+							<h2>+ See Project</h2>
+						</div>						
+					</a>
+				</div>
+				<div class="mix col-lg-6 col-md-6 digital">
+					<a href="images/album/20.jpg" style="background-image:url(images/album/portrait/9.jpg);" class="portfolio-item set-bg " data-setbg="img/portfolio/2.jpg">
+						<div class="pi-inner">
+							<h2>+ See Project</h2>
+						</div>						
+					</a>
+				</div>
+        <div class="mix col-lg-12 col-md-6 brand">
+          <a href="img/portfolio/6.jpg" style="background-image:url(images/album/landscape/4.jpg);" class="portfolio-item set-bg" data-setbg="img/portfolio/6.jpg">
+            <div class="pi-inner">
+              <h2>+ See Project</h2>
+            </div>            
+          </a>
         </div>
-        
+				<div class="mix col-lg-4 col-md-6 web">
+					<a href="images/album/21.jpg" style="background-image:url(images/album/portrait/10.jpg);" class="portfolio-item set-bg" data-setbg="img/portfolio/3.jpg">
+						<div class="pi-inner">
+							<h2>+ See Project</h2>
+						</div>						
+					</a>
+				</div>
+				<div class="mix col-lg-4 col-md-6 digital">
+					<a href="img/portfolio/4.jpg" style="background-image:url(images/album/portrait/11.jpg);" class="portfolio-item set-bg" data-setbg="img/portfolio/4.jpg">
+						<div class="pi-inner">
+							<h2>+ See Project</h2>
+						</div>						
+					</a>
+				</div>
+				<div class="mix col-lg-4 col-md-6 rened">
+					<a href="img/portfolio/5.jpg" style="background-image:url(images/album/portrait/12.jpg);" class="portfolio-item set-bg" data-setbg="img/portfolio/5.jpg">
+						<div class="pi-inner">
+							<h2>+ See Project</h2>
+						</div>						
+					</a>
+				</div>
+				<div class="mix col-lg-12 col-md-6 brand">
+					<a href="img/portfolio/6.jpg" style="background-image:url(images/album/landscape/5.jpg);" class="portfolio-item set-bg" data-setbg="img/portfolio/6.jpg">
+						<div class="pi-inner">
+							<h2>+ See Project</h2>
+						</div>						
+					</a>
+				</div>
+				<div class="mix col-lg-6 col-md-6 rened">
+					<a href="img/portfolio/7.jpg" style="background-image:url(images/album/portrait/13.jpg);" class="portfolio-item set-bg" data-setbg="img/portfolio/7.jpg">
+						<div class="pi-inner">
+							<h2>+ See Project</h2>
+						</div>						
+					</a>
+				</div>
+				<div class="mix col-lg-6 col-md-6 brand">
+					<a href="img/portfolio/8.jpg" style="background-image:url(images/album/portrait/14.jpg);" class="portfolio-item set-bg" data-setbg="img/portfolio/8.jpg">
+						<div class="pi-inner">
+							<h2>+ See Project</h2>
+						</div>						
+					</a>
+				</div>
+	  </div>
+	  <center><button type="button" class="btn btn-outline-dark" id="show_btn1" onclick="show_1();">Show More!</button></center>
+	  <div class="row portfolios-area" id="album_more1">
+      <div class="mix col-lg-12 col-md-6 brand">
+          <a href="img/portfolio/6.jpg" style="background-image:url(images/album/landscape/6.jpg);" class="portfolio-item set-bg" data-setbg="img/portfolio/6.jpg">
+            <div class="pi-inner">
+              <h2>+ See Project</h2>
+            </div>            
+          </a>
         </div>
-        <!--Row 3-->
-        <div class="row">
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <svg style="padding-top: 0.5em;" class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-              <title>Placeholder</title>
-              <foreignObject x='10px' y='2px' width='95%' height='95%'>
-                <img width='100%' height='100%'src='images/album/4.jpg' style="border-radius: 10px;">
-              </foreignObject>
-            </svg>
-            
-            <div class="card-body">
-              <p class="card-text">Description</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary" onclick="payment();">Buy</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
+		<div class="mix col-lg-6 col-md-6 web">
+			<a href="images/album/19.jpg" style="background-image:url(images/album/portrait/15.jpg);" class="portfolio-item set-bg">
+				<div class="pi-inner">
+					<h2>+ See Project</h2>
+				</div>						
+			</a>
+		</div>
+		<div class="mix col-lg-6 col-md-6 digital">
+			<a href="images/album/20.jpg" style="background-image:url(images/album/portrait/16.jpg);" class="portfolio-item set-bg " data-setbg="img/portfolio/2.jpg">
+				<div class="pi-inner">
+					<h2>+ See Project</h2>
+				</div>						
+			</a>
+		</div>
+    <div class="mix col-lg-12 col-md-6 brand">
+          <a href="img/portfolio/6.jpg" style="background-image:url(images/album/landscape/7.jpg);" class="portfolio-item set-bg" data-setbg="img/portfolio/6.jpg">
+            <div class="pi-inner">
+              <h2>+ See Project</h2>
+            </div>            
+          </a>
         </div>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <svg style="padding-top: 0.5em;" class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-              <title>Placeholder</title>
-              <foreignObject x='10px' y='2px' width='95%' height='95%'>
-                <img width='100%' height='100%'src='images/album/5.jpg' style="border-radius: 10px;">
-              </foreignObject>
-            </svg>
-            
-            <div class="card-body">
-              <p class="card-text">Description</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary" onclick="payment();">Buy</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
+		<div class="mix col-lg-4 col-md-6 web">
+			<a href="images/album/21.jpg" style="background-image:url(images/album/portrait/17.jpg);" class="portfolio-item set-bg" data-setbg="img/portfolio/3.jpg">
+				<div class="pi-inner">
+					<h2>+ See Project</h2>
+				</div>						
+			</a>
+		</div>
+		<div class="mix col-lg-4 col-md-6 digital">
+			<a href="img/portfolio/4.jpg" style="background-image:url(images/album/portrait/18.jpg);" class="portfolio-item set-bg" data-setbg="img/portfolio/4.jpg">
+				<div class="pi-inner">
+					<h2>+ See Project</h2>
+				</div>						
+			</a>
+		</div>
+		<div class="mix col-lg-4 col-md-6 rened">
+			<a href="img/portfolio/5.jpg" style="background-image:url(images/album/portrait/19.jpg);" class="portfolio-item set-bg" data-setbg="img/portfolio/5.jpg">
+				<div class="pi-inner">
+					<h2>+ See Project</h2>
+				</div>						
+			</a>
+		</div>
+		<div class="mix col-lg-12 col-md-6 brand">
+			<a href="img/portfolio/6.jpg" style="background-image:url(images/album/landscape/8.jpg);" class="portfolio-item set-bg" data-setbg="img/portfolio/6.jpg">
+				<div class="pi-inner">
+					<h2>+ See Project</h2>
+				</div>						
+			</a>
+		</div>
+		<div class="mix col-lg-6 col-md-6 rened">
+			<a href="img/portfolio/7.jpg" style="background-image:url(images/album/portrait/20.jpg);" class="portfolio-item set-bg" data-setbg="img/portfolio/7.jpg">
+				<div class="pi-inner">
+					<h2>+ See Project</h2>
+				</div>						
+			</a>
+		</div>
+		<div class="mix col-lg-6 col-md-6 brand">
+			<a href="img/portfolio/8.jpg" style="background-image:url(images/album/portrait/21.jpg);" class="portfolio-item set-bg" data-setbg="img/portfolio/8.jpg">
+				<div class="pi-inner">
+					<h2>+ See Project</h2>
+				</div>						
+			</a>
+		</div>
+	</div>
+  <center><button style="display: none;" type="button" class="btn btn-outline-dark" id="show_btn2" onclick="show_2();">Show More!</button></center>
+    <div style="display: none;" class="row portfolios-area" id="album_more2">
+      <div class="mix col-lg-12 col-md-6 brand">
+          <a href="img/portfolio/6.jpg" style="background-image:url(images/album/landscape/9.jpg);" class="portfolio-item set-bg" data-setbg="img/portfolio/6.jpg">
+            <div class="pi-inner">
+              <h2>+ See Project</h2>
+            </div>            
+          </a>
         </div>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <svg style="padding-top: 0.5em;" class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-              <title>Placeholder</title>
-              <foreignObject x='10px' y='2px' width='95%' height='95%'>
-                <img width='100%' height='100%'src='images/album/6.jpg' style="border-radius: 10px;">
-              </foreignObject>
-            </svg>
-            
-            <div class="card-body">
-              <p class="card-text">Description</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary" onclick="payment();">Buy</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
+    <div class="mix col-lg-6 col-md-6 web">
+      <a href="images/album/19.jpg" style="background-image:url(images/album/portrait/22.jpg);" class="portfolio-item set-bg">
+        <div class="pi-inner">
+          <h2>+ See Project</h2>
+        </div>            
+      </a>
+    </div>
+    <div class="mix col-lg-6 col-md-6 digital">
+      <a href="images/album/20.jpg" style="background-image:url(images/album/portrait/23.jpg);" class="portfolio-item set-bg " data-setbg="img/portfolio/2.jpg">
+        <div class="pi-inner">
+          <h2>+ See Project</h2>
+        </div>            
+      </a>
+    </div>
+    <div class="mix col-lg-12 col-md-6 brand">
+          <a href="img/portfolio/6.jpg" style="background-image:url(images/album/landscape/10.jpg);" class="portfolio-item set-bg" data-setbg="img/portfolio/6.jpg">
+            <div class="pi-inner">
+              <h2>+ See Project</h2>
+            </div>            
+          </a>
         </div>
-        
-        </div>
-        <!--Row 4-->
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <svg style="padding-top: 0.5em;" class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                <title>Placeholder</title>
-                <foreignObject x='10px' y='2px' width='95%' height='95%'>
-                  <img width='100%' height='100%'src='images/album/7.jpg' style="border-radius: 10px;">
-                </foreignObject>
-              </svg>
-              
-              <div class="card-body">
-                <p class="card-text">Description</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="payment();">Buy</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <svg style="padding-top: 0.5em;" class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                <title>Placeholder</title>
-                <foreignObject x='10px' y='2px' width='95%' height='95%'>
-                  <img width='100%' height='100%'src='images/album/8.jpg' style="border-radius: 10px;">
-                </foreignObject>
-              </svg>
-              
-              <div class="card-body">
-                <p class="card-text">Description</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="payment();">Buy</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <svg style="padding-top: 0.5em;" class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                <title>Placeholder</title>
-                <foreignObject x='10px' y='2px' width='95%' height='95%'>
-                  <img width='100%' height='100%'src='images/album/9.jpg' style="border-radius: 10px;">
-                </foreignObject>
-              </svg>
-              
-              <div class="card-body">
-                <p class="card-text">Description</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="payment();">Buy</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          </div>
-          <!--Row 5-->
-          <div class="row">
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <svg style="padding-top: 0.5em;" class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                  <title>Placeholder</title>
-                  <foreignObject x='10px' y='2px' width='95%' height='95%'>
-                    <img width='100%' height='100%'src='images/album/10.jpg' style="border-radius: 10px;">
-                  </foreignObject>
-                </svg>
-                
-                <div class="card-body">
-                  <p class="card-text">Description</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="payment();">Buy</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <svg style="padding-top: 0.5em;" class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                  <title>Placeholder</title>
-                  <foreignObject x='10px' y='2px' width='95%' height='95%'>
-                    <img width='100%' height='100%'src='images/album/11.jpg' style="border-radius: 10px;">
-                  </foreignObject>
-                </svg>
-                
-                <div class="card-body">
-                  <p class="card-text">Description</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="payment();">Buy</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <svg style="padding-top: 0.5em;" class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                  <title>Placeholder</title>
-                  <foreignObject x='10px' y='2px' width='95%' height='95%'>
-                    <img width='100%' height='100%'src='images/album/12.jpg' style="border-radius: 10px;">
-                  </foreignObject>
-                </svg>
-                
-                <div class="card-body">
-                  <p class="card-text">Description</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="payment();">Buy</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            </div>
-            <!--Row 6-->
-            <div class="row">
-              <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
-                  <svg style="padding-top: 0.5em;" class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                    <title>Placeholder</title>
-                    <foreignObject x='10px' y='2px' width='95%' height='95%'>
-                      <img width='100%' height='100%'src='images/album/13.jpg' style="border-radius: 10px;">
-                    </foreignObject>
-                  </svg>
-                  
-                  <div class="card-body">
-                    <p class="card-text">Description</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="payment();">Buy</button>
-                      </div>
-                      <small class="text-muted">9 mins</small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
-                  <svg style="padding-top: 0.5em;" class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                    <title>Placeholder</title>
-                    <foreignObject x='10px' y='2px' width='95%' height='95%'>
-                      <img width='100%' height='100%'src='images/album/14.jpg' style="border-radius: 10px;">
-                    </foreignObject>
-                  </svg>
-                  
-                  <div class="card-body">
-                    <p class="card-text">Description</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="payment();">Buy</button>
-                      </div>
-                      <small class="text-muted">9 mins</small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
-                  <svg style="padding-top: 0.5em;" class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                    <title>Placeholder</title>
-                    <foreignObject x='10px' y='2px' width='95%' height='95%'>
-                      <img width='100%' height='100%'src='images/album/15.jpg' style="border-radius: 10px;">
-                    </foreignObject>
-                  </svg>
-                  
-                  <div class="card-body">
-                    <p class="card-text">Description</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="payment();">Buy</button>
-                      </div>
-                      <small class="text-muted">9 mins</small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              </div>
-              <!--Row 7-->
-              <div class="row">
-                <div class="col-md-4">
-                  <div class="card mb-4 shadow-sm">
-                    <svg style="padding-top: 0.5em;" class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                      <title>Placeholder</title>
-                      <foreignObject x='10px' y='2px' width='95%' height='95%'>
-                        <img width='100%' height='100%'src='images/album/16.jpg' style="border-radius: 10px;">
-                      </foreignObject>
-                    </svg>
-                    
-                    <div class="card-body">
-                      <p class="card-text">Description</p>
-                      <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                          <button type="button" class="btn btn-sm btn-outline-secondary" onclick="payment();">Buy</button>
-                        </div>
-                        <small class="text-muted">9 mins</small>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="card mb-4 shadow-sm">
-                    <svg style="padding-top: 0.5em;" class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                      <title>Placeholder</title>
-                      <foreignObject x='10px' y='2px' width='95%' height='95%'>
-                        <img width='100%' height='100%'src='images/album/17.jpg' style="border-radius: 10px;">
-                      </foreignObject>
-                    </svg>
-                    
-                    <div class="card-body">
-                      <p class="card-text">Description</p>
-                      <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                          <button type="button" class="btn btn-sm btn-outline-secondary" onclick="payment();">Buy</button>
-                        </div>
-                        <small class="text-muted">9 mins</small>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="card mb-4 shadow-sm">
-                    <svg style="padding-top: 0.5em;" class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                      <title>Placeholder</title>
-                      <foreignObject x='10px' y='2px' width='95%' height='95%'>
-                        <img width='100%' height='100%'src='images/album/18.jpg' style="border-radius: 10px;">
-                      </foreignObject>
-                    </svg>
-                    
-                    <div class="card-body">
-                      <p class="card-text">Description</p>
-                      <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                          <button type="button" class="btn btn-sm btn-outline-secondary" onclick="payment();">Buy</button>
-                        </div>
-                        <small class="text-muted">9 mins</small>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-                </div>
-        
-
-        
-      </div>
+    <div class="mix col-lg-4 col-md-6 web">
+      <a href="images/album/21.jpg" style="background-image:url(images/album/portrait/24.jpg);" class="portfolio-item set-bg" data-setbg="img/portfolio/3.jpg">
+        <div class="pi-inner">
+          <h2>+ See Project</h2>
+        </div>            
+      </a>
+    </div>
+    <div class="mix col-lg-4 col-md-6 digital">
+      <a href="img/portfolio/4.jpg" style="background-image:url(images/album/portrait/25.jpg);" class="portfolio-item set-bg" data-setbg="img/portfolio/4.jpg">
+        <div class="pi-inner">
+          <h2>+ See Project</h2>
+        </div>            
+      </a>
+    </div>
+    <div class="mix col-lg-4 col-md-6 rened">
+      <a href="img/portfolio/5.jpg" style="background-image:url(images/album/portrait/26.jpg);" class="portfolio-item set-bg" data-setbg="img/portfolio/5.jpg">
+        <div class="pi-inner">
+          <h2>+ See Project</h2>
+        </div>            
+      </a>
+    </div>
+    <div class="mix col-lg-12 col-md-6 brand">
+      <a href="img/portfolio/6.jpg" style="background-image:url(images/album/landscape/11.jpg);" class="portfolio-item set-bg" data-setbg="img/portfolio/6.jpg">
+        <div class="pi-inner">
+          <h2>+ See Project</h2>
+        </div>            
+      </a>
+    </div>
+    <div class="mix col-lg-6 col-md-6 rened">
+      <a href="img/portfolio/7.jpg" style="background-image:url(images/album/portrait/28.jpg);" class="portfolio-item set-bg" data-setbg="img/portfolio/7.jpg">
+        <div class="pi-inner">
+          <h2>+ See Project</h2>
+        </div>            
+      </a>
+    </div>
+    <div class="mix col-lg-6 col-md-6 brand">
+      <a href="img/portfolio/8.jpg" style="background-image:url(images/album/portrait/29.jpg);" class="portfolio-item set-bg" data-setbg="img/portfolio/8.jpg">
+        <div class="pi-inner">
+          <h2>+ See Project</h2>
+        </div>            
+      </a>
     </div>
   </div>
-
+  <center><button style="display: none;" type="button" class="btn btn-outline-dark" id="show_btn3" onclick="show_3();">Show More!</button></center>
+  <div style="display: none;" class="row portfolios-area" id="album_more3">
+      <div class="mix col-lg-12 col-md-6 brand">
+          <a href="img/portfolio/6.jpg" style="background-image:url(images/album/landscape/12.jpg);" class="portfolio-item set-bg" data-setbg="img/portfolio/6.jpg">
+            <div class="pi-inner">
+              <h2>+ See Project</h2>
+            </div>            
+          </a>
+        </div>
+    <div class="mix col-lg-6 col-md-6 web">
+      <a href="images/album/19.jpg" style="background-image:url(images/album/portrait/30.jpg);" class="portfolio-item set-bg">
+        <div class="pi-inner">
+          <h2>+ See Project</h2>
+        </div>            
+      </a>
+    </div>
+    <div class="mix col-lg-6 col-md-6 digital">
+      <a href="images/album/20.jpg" style="background-image:url(images/album/portrait/31.jpg);" class="portfolio-item set-bg " data-setbg="img/portfolio/2.jpg">
+        <div class="pi-inner">
+          <h2>+ See Project</h2>
+        </div>            
+      </a>
+    </div>
+    <div class="mix col-lg-12 col-md-6 brand">
+          <a href="img/portfolio/6.jpg" style="background-image:url(images/album/landscape/13.jpg);" class="portfolio-item set-bg" data-setbg="img/portfolio/6.jpg">
+            <div class="pi-inner">
+              <h2>+ See Project</h2>
+            </div>            
+          </a>
+        </div>
+    <div class="mix col-lg-4 col-md-6 web">
+      <a href="images/album/21.jpg" style="background-image:url(images/album/portrait/32.jpg);" class="portfolio-item set-bg" data-setbg="img/portfolio/3.jpg">
+        <div class="pi-inner">
+          <h2>+ See Project</h2>
+        </div>            
+      </a>
+    </div>
+    <div class="mix col-lg-4 col-md-6 digital">
+      <a href="img/portfolio/4.jpg" style="background-image:url(images/album/portrait/33.jpg);" class="portfolio-item set-bg" data-setbg="img/portfolio/4.jpg">
+        <div class="pi-inner">
+          <h2>+ See Project</h2>
+        </div>            
+      </a>
+    </div>
+    <div class="mix col-lg-4 col-md-6 rened">
+      <a href="img/portfolio/5.jpg" style="background-image:url(images/album/portrait/34.jpg);" class="portfolio-item set-bg" data-setbg="img/portfolio/5.jpg">
+        <div class="pi-inner">
+          <h2>+ See Project</h2>
+        </div>            
+      </a>
+    </div>
+    <div class="mix col-lg-12 col-md-6 brand">
+      <a href="img/portfolio/6.jpg" style="background-image:url(images/album/landscape/14.jpg);" class="portfolio-item set-bg" data-setbg="img/portfolio/6.jpg">
+        <div class="pi-inner">
+          <h2>+ See Project</h2>
+        </div>            
+      </a>
+    </div>
+    <div class="mix col-lg-6 col-md-6 rened">
+      <a href="img/portfolio/7.jpg" style="background-image:url(images/album/portrait/35.jpg);" class="portfolio-item set-bg" data-setbg="img/portfolio/7.jpg">
+        <div class="pi-inner">
+          <h2>+ See Project</h2>
+        </div>            
+      </a>
+    </div>
+    <div class="mix col-lg-6 col-md-6 brand">
+      <a href="img/portfolio/8.jpg" style="background-image:url(images/album/portrait/36.jpg);" class="portfolio-item set-bg" data-setbg="img/portfolio/8.jpg">
+        <div class="pi-inner">
+          <h2>+ See Project</h2>
+        </div>            
+      </a>
+    </div>
+  </div>
+  <center><button style="display: none;" type="button" class="btn btn-outline-dark" id="show_btn4" onclick="show_4();">Show More!</button></center>
+	</div>
+  </div>
+</div>        
 </main>
 </html>
